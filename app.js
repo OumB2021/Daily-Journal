@@ -44,7 +44,13 @@ app.get('/compose', (req, res) => {
 });
 
 app.post('/compose', (req, res) => {
-  console.log(req.body.publication);
+
+  let post = {
+
+    Title:req.body.postTitle,
+    Body:req.body.postBody
+  }
+  
 });
 
 
