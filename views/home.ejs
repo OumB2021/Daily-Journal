@@ -3,8 +3,8 @@
 <h1>Home</h1>
 <p> <%= startingContent %> </p>
 
-<% for( let index = 0; index < postArray.length; index++ ) { %>
-  <% console.log(postArray[index].Title); %> 
-<% } %>
+<% postArray.forEach( function (post) { %>
+  <% console.log(post.Title); %> 
+<% }); %>
 
 <%- include('partials/footer.ejs') %>
