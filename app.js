@@ -59,8 +59,10 @@ app.post('/compose', (req, res) => {
 
 
 //Route parameters
-app.get('/posts/:topic', function(req, res){
-  console.log(req.params.topic);
+app.get('/posts/:postName', function(req, res){
+  if(req.params.postName == posts[posts.length-1].Title){
+    console.log('match found');
+  }else{console.log('match not found');}
 });
 
 app.listen(3000, function() {
