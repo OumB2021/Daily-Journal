@@ -60,9 +60,14 @@ app.post('/compose', (req, res) => {
 
 //Route parameters
 app.get('/posts/:postName', function(req, res){
-  if(req.params.postName == posts[posts.length-1].Title){
-    console.log('match found');
-  }else{console.log('match not found');}
+
+  var requestedTitle = req.params.postName;
+  
+  posts.forEach(function(post){
+    if (requestedTitle == post.Title){
+      console.log('matching title');
+    }
+  });
 });
 
 app.listen(3000, function() {
