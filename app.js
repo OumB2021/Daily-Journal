@@ -22,7 +22,7 @@ var posts = [];
 
 //Home page rendering
 app.get('/', (req, res) => {
-
+  
   res.render('home', {
     startingContent:homeStartingContent, 
     postArray:posts});
@@ -69,7 +69,8 @@ app.get('/posts/:postName', function(req, res){
     if (requestedTitle == _.lowerCase(post.Title)){
       res.render('post', {
         Title: post.Title, 
-        Content: post.Body});
+        Content: post.Body,
+      });
     }
 
   });
