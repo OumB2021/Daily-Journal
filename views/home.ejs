@@ -5,7 +5,7 @@
 
 <% postArray.forEach(function(post) { %>
   <h1> <%= post.Title %> </h1>
-  <p> <%= post.Body %> </p>  
+  <p> <%= post.Body.substring(0,100) + ' ...' %> </p>  
 <% }); %>
 
 <%- include('partials/footer.ejs') %>
